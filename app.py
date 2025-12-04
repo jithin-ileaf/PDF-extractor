@@ -15,8 +15,7 @@ warnings.filterwarnings("ignore")
 # -------------------------
 # Configure LLM (Gemini)
 # -------------------------
-
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=os.getenv("API_KEY"))
 model = genai.GenerativeModel(
     model_name="gemini-2.5-pro",
     generation_config={
